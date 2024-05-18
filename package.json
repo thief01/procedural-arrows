@@ -1,0 +1,13 @@
+{
+  "name": "com.warginia-studio.procedural-shape-generator",
+  "version": "1.0.0",
+  "displayName": "Procerdural Shape Generator",
+  "description": "Procedural generating shapes like line, arrow, triangle and more.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "author": {
+    "name": "Warginia Studio",
+    "email": "piotr.szulc.dev@gmail.com",
+    "url": "https://www.mimigames.pl"
+  }
+}
