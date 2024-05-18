@@ -5,6 +5,9 @@
   "description": "Procedural generating shapes like line, arrow, triangle and more.",
   "unity": "2019.1",
   "unityRelease": "0b5",
+    "dependencies": {
+    "com.unity.burst": "1.8.15",
+ },
   "author": {
     "name": "Warginia Studio",
     "email": "piotr.szulc.dev@gmail.com",
