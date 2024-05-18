@@ -1,6 +1,6 @@
 {
   "name": "com.warginia-studio.procedural-shape-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "displayName": "Procerdural Shape Generator",
   "description": "Procedural generating shapes like line, arrow, triangle and more.",
   "unity": "2019.1",
