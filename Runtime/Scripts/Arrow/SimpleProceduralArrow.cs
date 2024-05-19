@@ -1,4 +1,5 @@
 using UnityEngine;
+using WRA.Utility;
 
 namespace WRA.Procedural.Arrow
 {
@@ -29,20 +30,20 @@ namespace WRA.Procedural.Arrow
         protected override void GenerateObject()
         {
             // meshFilter.mesh = GenereteArrow();
-            meshFilter.mesh = MeshFactory.GenerateArrow(lenght, lineWidth, arrrowHeadLenght, arrrowHeadWidth, arrowOffset);
+            meshFilter.mesh = ArrowFactory.GenerateArrow(lenght, lineWidth, arrrowHeadLenght, arrrowHeadWidth, arrowOffset);
         }
     
         protected Mesh GenereteArrow()
         {
-            var line = MeshFactory.GenereteLine(lenght, lineWidth);
-            var triangle = MeshFactory.GenerateTriangle(new Vector3[]
+            var line = ArrowFactory.GenereteLine(lenght, lineWidth);
+            var triangle = SimpleFactory.CreateTriangle(new Vector3[]
             {
                 new Vector3(lenght, -arrrowHeadWidth / 2, 0),
                 new Vector3(lenght + arrrowHeadLenght, 0, 0),
                 new Vector3(lenght, arrrowHeadWidth / 2, 0)
             });
             var mesh = new Mesh();
-            mesh = MeshFactory.MeshCombine(line, triangle);
+            mesh = MeshCombine.Combine(line, triangle);
             mesh.name = "ProceduralArrow";
             return mesh;
         }

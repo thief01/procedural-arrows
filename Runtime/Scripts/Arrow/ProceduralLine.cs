@@ -24,7 +24,7 @@ namespace WRA.Procedural.Arrow
     
         protected override void GenerateObject()
         {
-            meshFilter.mesh = MeshFactory.GenereteLine(lenght, lineWidth);
+            meshFilter.mesh = ArrowFactory.GenereteLine(lenght, lineWidth);
         }
     }
 }
