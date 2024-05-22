@@ -21,15 +21,6 @@ namespace WRA.Utility
                 new Vector3(lenght * reverseOffsetX, -baseSize * offsetY, 0), // right bottom
                 new Vector3(-lenght * midOffsetX, baseSize * reverseOffsetY, 0) // top
             }, rotation );
-
-            // float offsetValue= lenght * offsetX;
-            //
-            // return new[]
-            // {
-            //     new Vector3(-offsetValue, -baseSize / 2, 0),
-            //     new Vector3( lenght - offsetValue, 0, 0),
-            //     new Vector3(-offsetValue, baseSize / 2, 0)
-            // };
         }
         
         public static Vector3[] RotateVertices(Vector3[] vertices, float rotation)
