@@ -15,20 +15,5 @@ namespace WRA.Procedural.Arrow
             // meshFilter.mesh = GenereteArrow();
             meshFilter.mesh = ArrowFactory.GenerateArrow(lenght, lineWidth, arrrowHeadLenght, arrrowHeadWidth, arrowOffset);
         }
-    
-        protected Mesh GenereteArrow()
-        {
-            var line = ArrowFactory.GenereteLine(lenght, lineWidth);
-            var triangle = SimpleFactory.CreateTriangle(new Vector3[]
-            {
-                new Vector3(lenght, -arrrowHeadWidth / 2, 0),
-                new Vector3(lenght + arrrowHeadLenght, 0, 0),
-                new Vector3(lenght, arrrowHeadWidth / 2, 0)
-            });
-            var mesh = new Mesh();
-            mesh = MeshCombine.Combine(line, triangle);
-            mesh.name = "ProceduralArrow";
-            return mesh;
-        }
     }
 }

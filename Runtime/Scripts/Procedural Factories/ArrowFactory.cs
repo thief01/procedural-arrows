@@ -40,29 +40,6 @@ namespace WRA.Procedural
         
             return mesh;
         }
-
-        // public static Mesh GenerateTriangle(Vector3[] veritcies)
-        // {
-        //     Mesh mesh = new Mesh();
-        //
-        //     Vector2[] uv = new Vector2[3];
-        //     int[] triangles = new int[3];
-        //
-        //     uv[0] = new Vector2(0, 0);
-        //     uv[1] = new Vector2(1, 0);
-        //     uv[2] = new Vector2(0, 1);
-        //
-        //     triangles[0] = 0;
-        //     triangles[1] = 2;
-        //     triangles[2] = 1;
-        //
-        //     mesh.vertices = veritcies;
-        //     mesh.uv = uv;
-        //     mesh.triangles = triangles;
-        //     mesh.name = "ProceduralTriangle";
-        //
-        //     return mesh;
-        // }
         
         public static Mesh GenerateArrow(float lineLenght, float lineHeight, float arrrowHeadLenght, float arrowHeadHeight, float offsetX= 0.5f)
         {
