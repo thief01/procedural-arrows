@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Burst;
 using UnityEngine;
 using WRA.Utility;
 
-namespace WRA.Procedural
+namespace procedural_shape_generator.Runtime.Scripts.Procedural_Factories.Flat3D
 {
     [BurstCompile(CompileSynchronously = true)]
     public static class SimpleFactory
