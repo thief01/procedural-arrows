@@ -50,7 +50,7 @@ namespace WRA.Procedural
             var triangleVerticies = MeshMath.GetTriangleVertices(arrowHeadHeight, arrrowHeadLenght, -90);
             for (int i = 0; i < triangleVerticies.Length; i++)
             {
-                triangleVerticies[i] += new Vector3(lineLenght - offsetValue, 0, 0);
+                triangleVerticies[i] += new Vector3(lineLenght - offsetValue + arrowHeadHeight / 2, 0, 0);
             }
             var triangle = SimpleFactory.CreateTriangle(triangleVerticies);
             
