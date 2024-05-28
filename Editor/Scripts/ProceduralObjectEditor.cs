@@ -1,5 +1,6 @@
 #if UNITY_EDITOR
 
+using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,6 +9,13 @@ namespace WRA.Procedural.Arrow.Editor
     [CustomEditor(typeof(ProceduralObject), true)]
     public class ProceduralObjectEditor : UnityEditor.Editor
     {
+        private SerializedObject serializedObject;
+
+        private void OnEnable()
+        {
+            serializedObject = new SerializedObject(target);
+        }
+
         public override void OnInspectorGUI()
         {
             if (GUILayout.Button("Export UV"))
@@ -53,7 +61,16 @@ namespace WRA.Procedural.Arrow.Editor
                     System.IO.File.WriteAllBytes(path, bytes);
                 }
             }
+            
+            serializedObject.Update();
+            EditorGUI.BeginChangeCheck();
             base.OnInspectorGUI();
+            if (EditorGUI.EndChangeCheck())
+            {
+                ((ProceduralObject)target).Refresh();
+            }
+
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }
