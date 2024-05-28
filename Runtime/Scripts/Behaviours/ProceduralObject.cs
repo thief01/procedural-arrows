@@ -19,9 +19,7 @@ namespace WRA.Procedural.Arrow
         {
             GenerateObject();
         }
-
-        protected abstract bool ShouldUpdate();
-
+        
         protected abstract void GenerateObject();
     }
 }
